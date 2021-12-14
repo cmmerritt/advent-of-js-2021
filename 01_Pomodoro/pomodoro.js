@@ -4,8 +4,23 @@
 // setTimeout function?
 // when timer ends (time = 0), color of circle changes from green to red and alert message pops up 
 
-const startButton = document.getElementsByClassName("start");
+const startButton = document.getElementsByClassName("start")[0];
 
-startButton[0].addEventListener('click', () => {
-  startButton[0].textContent = startButton[0].textContent === "start" ? "stop" : "start";
+const ring = document.getElementsByClassName("ring")[0];
+
+startButton.addEventListener('click', () => {
+  startButton.textContent = startButton.textContent === "start" ? "stop" : "start";
+    if(ring.classList.contains("ending")) {
+      ring.classList.remove("ending");
+    } else {
+    ring.classList.add("ending");
+    };
 });
+
+// change ring color from green to red
+// add already existing red ending circle css class to document class
+
+
+
+
+
